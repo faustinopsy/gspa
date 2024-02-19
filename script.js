@@ -1,5 +1,5 @@
 import rotas from './router.js'
-
+import Navbar from './navbar.js'
 function atualizarMeta(meta) {
     document.title = meta.title;
     document.querySelector('meta[name="description"]').content = meta.description;
@@ -8,7 +8,8 @@ function atualizarMeta(meta) {
 function navegar(rota) {
     const component = rotas[rota].component;
     const conteudo = document.getElementById("main-content");
-    conteudo.innerHTML = component();
+    conteudo.innerHTML = Navbar();
+    conteudo.innerHTML += component();
     atualizarMeta(rotas[rota].meta);
 }
 
