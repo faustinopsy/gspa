@@ -7,9 +7,10 @@ function atualizarMeta(meta) {
 
 function navegar(rota) {
     const component = rotas[rota].component;
+    const nav = document.getElementById("nav");
     const conteudo = document.getElementById("main-content");
-    conteudo.innerHTML = Navbar();
-    conteudo.innerHTML += component();
+    nav.innerHTML = Navbar();
+    conteudo.innerHTML = component();
     atualizarMeta(rotas[rota].meta);
 }
 
