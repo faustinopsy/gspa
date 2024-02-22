@@ -1,6 +1,6 @@
-import Home from './home.js';
-import Sobre from './sobre.js';
-import Contato from './contato.js';
+import Home from './paginas/home.js';
+import Sobre from './paginas/sobre.js';
+import Contato from './paginas/contato.js';
 
 class Rotas {
     constructor() {

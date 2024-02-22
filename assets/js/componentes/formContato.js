@@ -1,4 +1,4 @@
-class Contato {
+class FormContato {
     render() {
         return `
         <h1>Página contato</h1>
@@ -16,4 +16,4 @@ class Contato {
     }
 }
 
-export default Contato;
+export default FormContato;
