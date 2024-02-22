@@ -22,6 +22,8 @@ class App {
         const classInRouter = rotas[rotaAtual].component;
         const navbar = new Navbar();
         this.nav.innerHTML = navbar.render();
+        navbar.fixNavbarOnMobile();
+        window.addEventListener('resize', () => navbar.fixNavbarOnMobile());
         this.conteudo.innerHTML = '';
         this.conteudo.innerHTML = classInRouter.render();
         if (classInRouter.afterRender) await classInRouter.afterRender();
@@ -30,3 +32,4 @@ class App {
 }
 
 const navegador = new App();
+
