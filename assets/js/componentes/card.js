@@ -9,9 +9,7 @@ class Card {
 
     render() {
         const { titulo, imagem, descricao, conteudo } = this.data;
-
         this.cardElement.classList.add('card');
-
         this.cardElement.innerHTML = `
         <div class="w3-card w3-center">
             <img src="${imagem}" alt="${titulo}" style="width:40%">
@@ -26,9 +24,7 @@ class Card {
         this.contentDiv.classList.add('content');
         this.contentDiv.style.display = 'none';
         this.contentDiv.innerHTML = `<p>${conteudo}</p>`;
-
         this.cardElement.querySelector('.container').appendChild(this.contentDiv);
-
         this.cardElement.querySelector('.toggle-content-btn').addEventListener('click', () => this.toggleContent());
     }
 
