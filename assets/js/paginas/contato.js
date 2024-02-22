@@ -6,6 +6,9 @@ class Contato {
     render() {
         return this.formulario.render();
     }
+    afterRender(){
+        
+    }
 }
 
 export default Contato;

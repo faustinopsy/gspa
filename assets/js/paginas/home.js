@@ -28,7 +28,11 @@ class Home {
             });
         });
     }
-    
+    destroy() {
+        if (this.slides.destroy) {
+            this.slides.destroy();
+        }
+    }
 
 }
 

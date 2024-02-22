@@ -8,6 +8,7 @@ class SlideImages {
             "assets/img/img3.jpg"
         ];
         this.slideControls = new SlideControls();
+        this.intervalId = null;
     }
 
     render() {
@@ -43,9 +44,16 @@ class SlideImages {
         });
 
         this.slideControls.showSlides();
-        setInterval(() => this.slideControls.plusSlides(1), 4000);
+        this.intervalId = setInterval(() => this.slideControls.plusSlides(1), 4000);
+    }
+    clearInterval() {
+        clearInterval(this.intervalId); 
     }
 
+    destroy() {
+        this.clearInterval(); 
+       
+    }
 }
 
 export default SlideImages;

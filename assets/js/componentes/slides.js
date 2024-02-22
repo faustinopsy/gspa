@@ -11,7 +11,11 @@ class Slide {
     afterRender(){
         this.slideImages.afterRender();
     }
-    
+    destroy() {
+        if (this.slideImages.destroy) {
+            this.slideImages.destroy();
+        }
+    }
 }
 
 export default Slide;

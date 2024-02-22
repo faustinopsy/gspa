@@ -63,6 +63,8 @@ class SlideControls {
         slides[this.slideIndex - 1].style.display = "block";
         dots[this.slideIndex - 1].className += " active";
     }
+    
+    
 }
 
 export default SlideControls;
