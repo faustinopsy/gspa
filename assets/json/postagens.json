@@ -1,0 +1,21 @@
+[
+    {
+      "titulo": "Exemplo de Card 1",
+      "imagem": "assets/img/imagem1.png",
+      "descricao": "Descrição do Card 1",
+      "conteudo": "Conteúdo detalhado do Card 1"
+    },
+    {
+      "titulo": "Exemplo de Card 2",
+      "imagem": "assets/img/imagem2.png",
+      "descricao": "Descrição do Card 2",
+      "conteudo": "Conteúdo detalhado do Card 2"
+    },
+    {
+      "titulo": "Exemplo de Card 3",
+      "imagem": "assets/img/imagem3.png",
+      "descricao": "Descrição do Card 3",
+      "conteudo": "Conteúdo detalhado do Card 3"
+    }
+  ]
+  
