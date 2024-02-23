@@ -10,23 +10,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://faustinopsy.github.io/gspa/</loc>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://example.com/#home</loc>
+    <loc>https://faustinopsy.github.io/gspa/#home</loc>
     <lastmod>2024-02-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://example.com/#sobre</loc>
+    <loc>https://faustinopsy.github.io/gspa/#sobre</loc>
     <lastmod>2024-02-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://example.com/#contato</loc>
+    <loc>https://faustinopsy.github.io/gspa/#contato</loc>
+    <lastmod>2024-02-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://faustinopsy.github.io/gspa/#extra</loc>
     <lastmod>2024-02-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>

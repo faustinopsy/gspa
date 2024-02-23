@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://faustinopsy.com/sitemap.xml
+Sitemap: https://faustinopsy.github.io/gspa/sitemap.xml
