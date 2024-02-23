@@ -44,7 +44,7 @@ class PWAInstaller {
         closeButton.style.top = '10px';
         closeButton.style.right = '10px';
         closeButton.style.padding = '5px 10px';
-        closeButton.style.background = 'red';
+        closeButton.style.backgroundColor = 'red';
         closeButton.style.color = 'white';
         closeButton.style.border = 'none';
         closeButton.style.borderRadius = '5px';
