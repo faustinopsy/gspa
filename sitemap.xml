@@ -1,12 +1,3 @@
-<!--Fregûenca de atualização para os motores de busca rastrear mudanças 
-  "always" (sempre), 
-  "hourly" (a cada hora), 
-  "daily" (diariamente), 
-  "weekly" (semanalmente),
-  "monthly" (mensalmente) 
-  "yearly" (anualmente).
- -->
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
