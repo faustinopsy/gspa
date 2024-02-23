@@ -10,7 +10,7 @@ class Card {
         const { titulo, imagem, descricao, conteudo } = this.data;
         this.cardElement.classList.add('card');
         this.cardElement.innerHTML = `
-            <img src="${imagem}" alt="${titulo}" style="width:40%">
+            <img src="${imagem}" alt="${titulo}" style="width:200px; height:230px">
             <div class="container">
                 <h4><b>${titulo}</b></h4>
                 <p>${descricao}</p>
