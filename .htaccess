@@ -1,0 +1,33 @@
+# Cache de imagens por 1 mês
+<FilesMatch "\.(jpg|jpeg|png|gif|ico)$">
+    Header set Cache-Control "max-age=2592000, public"
+</FilesMatch>
+
+# Cache de CSS e JS por 1 semana
+<FilesMatch "\.(css|js)$">
+    Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
+<IfModule mod_deflate.c>
+    # Ativar a compactação
+    SetOutputFilter DEFLATE
+
+    # Não compactar recursos MIME específicos
+    SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
+    SetEnvIfNoCase Request_URI \.(?:exe|t?gz|zip|bz2|sit|rar)$ no-gzip dont-vary
+    SetEnvIfNoCase Request_URI \.pdf$ no-gzip dont-vary
+
+    # Permitir a compactação somente para navegadores específicos
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+</IfModule>
+#caso queiram URL amigáveis em projetos próprios
+#abaixo consegue trocar ult ou retirar extensão
+#só serve para hospedagem que roda apache/php
+# <IfModule mod_rewrite.c>
+#     RewriteEngine On
+#     RewriteCond %{REQUEST_FILENAME} !-f
+#     RewriteCond %{REQUEST_FILENAME} !-d
+#     RewriteRule ^(.*)$ /#$1 [L,NE,R=302]
+# </IfModule>
+
