@@ -14,7 +14,7 @@ class Card {
             <div class="container">
                 <h4><b>${titulo}</b></h4>
                 <p>${descricao}</p>
-                <button class="toggle-content-btn">Mostrar Conteúdo</button>
+                <button class="toggle-content-btn w3-btn">Mostrar Conteúdo</button>
             </div>
         `;
         this.contentDiv.classList.add('content');
