@@ -9,7 +9,7 @@ class SlideImages {
         const slides = this.images.map((image, index) => `
             <div class="mySlides fade">
                 <div class="numbertext">${index + 1} / ${this.images.length}</div>
-                <img src="${image}" style="width:100%">
+                <img src="${image}" style="width:100%" alt="Painel de slides">
             </div>
         `).join('');
         const controls = this.slideControls.render();
