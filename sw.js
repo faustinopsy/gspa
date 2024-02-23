@@ -28,6 +28,7 @@ const STATIC_ASSETS = [
     '/assets/js/paginas/home.js',
     '/assets/js/paginas/sobre.js',
     '/assets/js/paginas/contato.js',
+    '/assets/js/paginas/extra.js',
 ];
 self.addEventListener('activate', event => {
   const cacheWhitelist = [CACHE_NAME]; 
