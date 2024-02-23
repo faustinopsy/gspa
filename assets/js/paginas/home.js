@@ -3,16 +3,18 @@ import Card from '../componentes/card.js';
 import FetchData from '../api/FetchData.js';
 class Home {
     constructor() {
-        this.slideIndex = 0;
-        this.slides = new Slides()
+        this.images = [
+            "assets/img/img1.jpg",
+            "assets/img/img2.jpg",
+            "assets/img/img3.jpg"
+        ];
+        this.slides = new Slides(this.images)
     }
-
     render() {
         return `
         <h2>Slides</h2>
         ${this.slides.render()}
         <div id="cardsContainer"></div>
-
         `;
     }
     afterRender(){
@@ -23,8 +25,11 @@ class Home {
         const fetchData = await new FetchData('./assets/json/postagens.json');
         fetchData.getData().then(data => {
             data.forEach(cardData => {
+                const cardPainel = document.createElement('div');
+                cardPainel.classList.add("w3-card","w3-center")
                 const card = new Card(cardData);
-                document.getElementById('cardsContainer').appendChild(card.getElement());
+                cardPainel.appendChild(card.getElement());
+                document.getElementById('cardsContainer').appendChild(cardPainel);
             });
         });
     }
@@ -33,7 +38,6 @@ class Home {
             this.slides.destroy();
         }
     }
-
 }
 
 export default Home;

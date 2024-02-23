@@ -1,7 +1,7 @@
 import Home from './paginas/home.js';
 import Sobre from './paginas/sobre.js';
 import Contato from './paginas/contato.js';
-
+import Extra from './paginas/extra.js';
 class Rotas {
     constructor() {
         this.rotas = {
@@ -26,14 +26,19 @@ class Rotas {
                     description: "Página de contato do mini SPA",
                 },
             },
+            "#extra": {
+                component: new Extra(),
+                meta: {
+                    title: "Mini SPA - Extra",
+                    description: "Página Extra do mini SPA",
+                },
+            },
         };
     }
-
     getRotas() {
         return this.rotas;
     }
 }
 
 const rotas = new Rotas();
-
 export default rotas.getRotas();

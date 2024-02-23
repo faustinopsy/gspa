@@ -1,10 +1,9 @@
 import SlideImages from './slides/slideImages.js';
 
 class Slide {
-    constructor() {
-        this.slideImages = new SlideImages();
+    constructor(images) {
+        this.slideImages = new SlideImages(images);
     }
-
     render() {
         return this.slideImages.render();
     }

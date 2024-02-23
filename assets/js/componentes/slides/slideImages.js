@@ -1,11 +1,7 @@
 import SlideControls from './slideControls.js';
 class SlideImages {
-    constructor() {
-        this.images = [
-            "assets/img/img1.jpg",
-            "assets/img/img2.jpg",
-            "assets/img/img3.jpg"
-        ];
+    constructor(images) {
+        this.images = images
         this.slideControls = new SlideControls();
         this.intervalId = null;
     }
