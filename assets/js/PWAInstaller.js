@@ -31,7 +31,7 @@ class PWAInstaller {
         modal.style.display = 'flex';
         modal.style.justifyContent = 'center';
         modal.style.alignItems = 'center';
-        modal.style.zIndex = '9000';
+        modal.style.zIndex = '10000';
 
         const modalContent = document.createElement('div');
         modalContent.style.backgroundColor = '#fff';
@@ -77,7 +77,7 @@ class PWAInstaller {
 
             const installModal = document.createElement('div');
             installModal.setAttribute('id', 'installModal');
-            installModal.style.zIndex = '97000';
+            installModal.style.zIndex = '9999';
             installModal.style.top = '100px';
             installModal.innerHTML = `
                 <div class="w3-panel w3-pale-green">

@@ -80,6 +80,7 @@ header{
   background-color: black;
   backdrop-filter: blur(2px);
    color: white;
+   z-index: 9999;
 }
 main{
   margin-top: 95px;
@@ -88,13 +89,13 @@ main{
   position: fixed;
   bottom: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 9999;
 }
 .fixed-top {
   position: fixed;
   top: 0px;
   width: 100%;
-  z-index: 999;
+  z-index: 9999;
 }
 .story-container {
   width: 100%;
