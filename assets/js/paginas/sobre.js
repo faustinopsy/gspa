@@ -3,9 +3,9 @@ import Slides from '../componentes/slides.js';
 class Sobre {
     constructor(){
         this.images = [
-            "assets/img/img1.jpg",
-            "assets/img/img2.jpg",
-            "assets/img/img3.jpg"
+            "assets/img/img1.webp",
+            "assets/img/img2.webp",
+            "assets/img/img3.webp"
         ];
         this.slides = new Slides(this.images)
     }
