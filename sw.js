@@ -1,9 +1,10 @@
 const CACHE_NAME = 'app-cache-v9';
 const STATIC_ASSETS = [
-    '/',
     '/manifest.json',
     '/index.html',
     '/favicon.ico',
+    '/robots.txt',
+    '/sitemap.xml',
     '/assets/img/imagem1.webp',
     '/assets/img/imagem2.webp',
     '/assets/img/imagem3.webp',
