@@ -3,6 +3,8 @@
     "small": "Small",
     "medium": "Medium",
     "large": "Large",
+    "xlarge": "E.Large",
+    "xxlarge": "X.Large",
     "dark_mode": "Dark Mode:",
     "language": "Language:",
     "english": "English",
@@ -36,5 +38,7 @@
     "install": "Install",
     "cancel": "Cancel",
     "backdrop_filter": "Backdrop Filter",
-    "background_color": "Background Color"
+    "background_color": "Background Color",
+    "text_color": "text color",
+    "font_type": "font type"
 }

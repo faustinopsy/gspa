@@ -3,6 +3,8 @@
     "small": "Pequeño",
     "medium": "Mediano",
     "large": "Grande",
+    "xlarge": "E.Grande",
+    "xxlarge": "X.Grande",
     "dark_mode": "Modo Oscuro:",
     "language": "Idioma:",
     "english": "Inglés",
@@ -36,5 +38,7 @@
     "install": "Instalar",
     "cancel": "Cancelar",
     "backdrop_filter": "Filtro de Telón",
-    "background_color": "Color de Fondo"
+    "background_color": "Color de Fondo",
+    "text_color": "Color del texto",
+    "font_type": "Tipo de fuente"
 }

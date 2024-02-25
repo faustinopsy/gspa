@@ -13,12 +13,9 @@ class App {
     }
     
     async init() {
-        
-        
         await this.linguagem.loadTranslations();
         this.configuracoes = new Configuracoes();
         this.configuracoes.applySettings();
-        
         const floatingButton = new FloatingButton(this.linguagem, this.navegar.bind(this));
         floatingButton.render();
         window.addEventListener("hashchange", () => this.navegar(location.hash));

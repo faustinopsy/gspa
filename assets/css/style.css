@@ -6,7 +6,9 @@
 p {
   font-size: var(--p-font-size);
 }
-
+label{
+  font-size: var(--p-font-size);
+}
 main {
   height:1000px;
   background-image: url('');
@@ -14,7 +16,7 @@ main {
   background-position: center; 
   background-repeat: no-repeat; 
   background-color: rgba(217, 204, 204, 0.4);
-  backdrop-filter: blur(30px);
+  
 }
 
 .slideshow-container {
@@ -255,7 +257,7 @@ main{
   transform: translateY(2px);
 }
 .button-group .btn.btn-active-2{
-  background-color: #19ff34;
+  background-color: #052af8;
   color: white;
   border-color: #007bff;
   border-radius: 20px 5px 20px 5px;
