@@ -8,29 +8,31 @@ class Home {
             "assets/img/img2.webp",
             "assets/img/img3.webp"
         ];
-        this.slides = new Slides(this.images)
+        this.slides = new Slides(this.images);
+        this.i18nService = null;
     }
-    render() {
+    render(i18nService) {
+        this.i18nService = i18nService;
         return `
-        <h2>Slides</h2>
+        <h1>${this.i18nService.t('home')}</h1>
         ${this.slides.render()}
         <div id="cardsContainer"></div>
         `;
     }
     afterRender(){
         this.slides.afterRender();
-        this.getCards()
+        this.getCards(this.i18nService)
     }
-    async getCards(){
-        const fetchData = await new FetchData('./assets/json/postagens.json');
+    async getCards(i18nService){
+        const fetchData = new FetchData('./assets/json/postagens.json'); 
         fetchData.getData().then(data => {
+            const painelLinha = document.createElement('div');
+            painelLinha.className = "w3-cell-row";
             data.forEach(cardData => {
-                const cardPainel = document.createElement('div');
-                cardPainel.classList.add("w3-card","w3-center")
-                const card = new Card(cardData);
-                cardPainel.appendChild(card.getElement());
-                document.getElementById('cardsContainer').appendChild(cardPainel);
+                const card = new Card(cardData,i18nService);
+                painelLinha.appendChild(card.getElement()); 
             });
+            document.getElementById('cardsContainer').appendChild(painelLinha);
         });
     }
     destroy() {

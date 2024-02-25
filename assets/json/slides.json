@@ -1,24 +1,24 @@
 [
     {
       "titulo": "Exemplo de Card 1",
-      "imagem": "assets/img/imagem1.webp",
+      "imagem": "assets/img/js1.webp",
       "descricao": "Descrição do Card 1",
       "conteudo": "Conteúdo detalhado do Card 1",
-      "url" : "detalhado_Card_1"
+      "imagensRelacionadas": ["assets/img/js1.webp","assets/img/js2.webp","assets/img/js3.webp"]
     },
     {
       "titulo": "Exemplo de Card 2",
-      "imagem": "assets/img/imagem2.webp",
+      "imagem": "assets/img/imagem1.webp",
       "descricao": "Descrição do Card 2",
       "conteudo": "Conteúdo detalhado do Card 2",
-      "url" : "http://localhost:666/#detalhado_Card_2"
+      "imagensRelacionadas": ["assets/img/imagem1.webp","assets/img/imagem2.webp"]
     },
     {
       "titulo": "Exemplo de Card 3",
-      "imagem": "assets/img/imagem3.webp",
+      "imagem": "assets/img/imagem1.webp",
       "descricao": "Descrição do Card 3",
       "conteudo": "Conteúdo detalhado do Card 3",
-      "url" : "detalhado_Card_3"
+      "imagensRelacionadas": ["assets/img/imagem1.webp","assets/img/imagem2.webp"]
     }
   ]
   

@@ -1,8 +1,10 @@
+import I18nService from '../js/libs/I18nService.js';
 class PWAInstaller {
     constructor() {
         this.deferredPrompt = null;
         this.setupButton = null;
         this.lido = false;
+        this.linguagem = new I18nService();
     }
 
     initialize() {
@@ -66,7 +68,8 @@ class PWAInstaller {
         document.body.appendChild(modal);
     }
 
-    setupListeners() {
+    async setupListeners() {
+        await this.linguagem.loadTranslations();
         window.addEventListener('DOMContentLoaded', () => {
             this.checkReadState();
         });
@@ -81,10 +84,10 @@ class PWAInstaller {
             installModal.style.top = '100px';
             installModal.innerHTML = `
                 <div class="w3-panel w3-pale-green">
-                    <h2>Instalar Aplicativo</h2>
-                    <p>Quer instalar para uma experiência completa?</p>
-                    <button id="installBtn" class="w3-button w3-white w3-border w3-border-blue w3-round">📱 Instalar</button>
-                    <button id="cancelInstallBtn" class="w3-button w3-white w3-border w3-border-red w3-round">❌ Cancelar</button>
+                    <h2>${this.linguagem.t('install_app')}</h2>
+                    <button id="installBtn" class="w3-button w3-white  ">📱 ${this.linguagem.t('install')}</button>
+                    <button id="cancelInstallBtn" class="w3-button w3-white  ">❌ ${this.linguagem.t('cancel')}</button>
+                    <p>${this.linguagem.t('install_prompt')}</p>
                 </div>
             `;
             document.body.appendChild(installModal);
