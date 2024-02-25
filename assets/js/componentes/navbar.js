@@ -14,10 +14,10 @@ class Navbar {
             </nav>
             <div id="mobibar" class="overlay">
                 <div class="overlay-content">
-                    <a href="/#" id="homeLink">${this.i18nService.t('home')}</a>
-                    <a href="/#sobre" id="aboutLink">${this.i18nService.t('about')}</a>
-                    <a href="/#contato" id="contactLink">${this.i18nService.t('contact')}</a>
-                    <a href="/#extra" >${this.i18nService.t('extra')}</a>
+                    <a href="#" id="homeLink">${this.i18nService.t('home')}</a>
+                    <a href="#sobre" id="aboutLink">${this.i18nService.t('about')}</a>
+                    <a href="#contato" id="contactLink">${this.i18nService.t('contact')}</a>
+                    <a href="#extra" >${this.i18nService.t('extra')}</a>
                     </div>
             </div>
             <div class="w3-bottom w3-black" style="z-index:99;">
