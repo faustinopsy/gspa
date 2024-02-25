@@ -3,7 +3,7 @@ import FetchData from '../api/FetchData.js';
 
 class I18nService {
     constructor() {
-        this.language = LocalStorageService.getItem('language') || 'en';
+        this.language = LocalStorageService.getItem('language') || 'pt';
         this.translations = {};
     }
 
