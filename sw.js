@@ -1,4 +1,4 @@
-const CACHE_NAME = 'app-cache-v2';
+const CACHE_NAME = 'app-cache-v9';
 const STATIC_ASSETS = [
     '/',
     '/manifest.json',
