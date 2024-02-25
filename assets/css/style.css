@@ -260,7 +260,15 @@ main{
   background-color: #052af8;
   color: white;
   border-color: #007bff;
-  border-radius: 20px 5px 20px 5px;
+  border-radius: 20px 20px 5px 5px;
+  box-shadow: 0 2px #666; 
+  transform: translateY(2px);
+}
+.button-group .btn.btn-active-3{
+  background-color: #f85605;
+  color: white;
+  border-color: #c4e327;
+  border-radius: 5px 5px 20px 20px;
   box-shadow: 0 2px #666; 
   transform: translateY(2px);
 }

@@ -65,8 +65,38 @@ class Configuracoes {
         this.applySettings();
         location.reload();
     }
-
+    clearSettings() {
+        const confirma =this.i18nService.t('confirmation_prompt');
+        const sucesso =this.i18nService.t('settings_reset');
+        const cancela =this.i18nService.t('action_cancelled');
+        if (confirm(confirma)) {
+            const keysToRemove = [
+                'fontSize',
+                'darkMode',
+                'language',
+                'backgroundImage',
+                'backdropFilter',
+                'textColor',
+                'fontType'
+            ];
+            keysToRemove.forEach(key => {
+                LocalStorageService.removeItem(key);
+            });
+            this.fontSize = 'medium';
+            this.darkMode = false;
+            this.language = 'pt';
+            this.backgroundImage = '';
+            this.backdropFilter = 'blur(10px)';
+            this.textColor = '#000000';
+            this.fontType = 'Arial';
+            alert(sucesso);
+            location.reload();
+        } else {
+            alert(cancela);
+        }
+    }
     render(i18nService) {
+        this.applySettings()
         this.i18nService = i18nService;
        return `
         <h1>${this.i18nService.t('page_settings')}</h1>
@@ -129,14 +159,15 @@ class Configuracoes {
         </div>
         
         <hr>
-        <div class="button-group" >
-            <button id="save-settings" class="btn btn-active-2">${this.i18nService.t('save_settings_button')}</button>
+            <div class="button-group" >
+                 <button id="save-settings" class="btn btn-active-2">${this.i18nService.t('save_settings_button')}</button>
+                 <button id="reset-settings" class="btn btn-active-3">${this.i18nService.t('reset-settings')}</button>
             </div>
         </div>
        
         `;
     }
-
+    
     afterRender() {
         document.getElementById('font-size').value = this.fontSize;
         document.getElementById('language').value = this.language;
@@ -156,6 +187,9 @@ class Configuracoes {
 
         document.getElementById('save-settings').addEventListener('click', () => {
             this.saveSettings();
+        });
+        document.getElementById('reset-settings').addEventListener('click', () => {
+            this.clearSettings();
         });
         document.getElementById('background-image').addEventListener('change', () => {
             const fileInput = document.getElementById('background-image');

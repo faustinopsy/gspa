@@ -31,6 +31,7 @@
     "choose_background_image": "Escolha uma imagem de fundo:",
     "apply_background_button": "Aplicar Imagem de Fundo",
     "save_settings_button": "Salvar Configurações",
+    "reset-settings" : "Limpar Configurações",
     "details": "Detalhes",
     "open": "Abrir",
     "install_app": "Instalar Aplicativo",
@@ -40,5 +41,8 @@
     "backdrop_filter": "Filtro de Fundo",
     "background_color": "Cor de Fundo",
     "text_color": "Cor do texto",
-    "font_type": "Tipo de letra"
+    "font_type": "Tipo de letra",
+    "confirmation_prompt": "Você tem certeza que deseja limpar as configurações?",
+    "settings_reset": "As configurações foram redefinidas para os padrões.",
+    "action_cancelled":"Ação cancelada. As configurações não foram alteradas."
 }

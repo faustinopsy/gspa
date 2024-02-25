@@ -31,6 +31,7 @@
     "choose_background_image": "Choose a background image:",
     "apply_background_button": "Apply Background Image",
     "save_settings_button": "Save Settings",
+    "reset-settings" : "Reset Settings",
     "details": "Details",
     "open": "Open",
     "install_app": "Install App",
@@ -40,5 +41,8 @@
     "backdrop_filter": "Backdrop Filter",
     "background_color": "Background Color",
     "text_color": "text color",
-    "font_type": "font type"
+    "font_type": "font type",
+    "confirmation_prompt": "Are you sure you want to clear the settings?",
+    "settings_reset": "The settings have been reset to defaults.",
+    "action_cancelled":"Action cancelled. The settings have not been changed."
 }
