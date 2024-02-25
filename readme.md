@@ -38,6 +38,10 @@ O propósito é guiar estudantes em um desenvolvimento moderno, onde a performan
 - Adicionadas funcionalidades extras e melhorias.
 - Versão final do projeto, com todas as funcionalidades implementadas e melhorias realizadas.
 
+### [SPA-9-evolucao-OOP-bonus](https://github.com/faustinopsy/gspa/tree/SPA-9-evolucao-OOP-bonus)
+- Adicionadas tradução em três línguas e menu de preferências pessoais.
+- Versão final com bonus do projeto, com todas as funcionalidades implementadas e melhorias realizadas.
+
 ## O projeto gSPA
 
 ### Single Page Application (SPA) com JavaScript Puro e Modularização
