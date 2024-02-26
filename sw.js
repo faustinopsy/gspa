@@ -42,7 +42,10 @@ const STATIC_ASSETS = [
     './assets/js/libs/LocalStorageService.js',
     './assets/js/paginas/Configuracoes.js',
     './assets/json/slides.json',
-    './assets/js/componentes/floatingButton.js'
+    './assets/js/componentes/floatingButton.js',
+    './assets/img/notifica.webp',
+    './assets/js/Atualizacoes.js',
+    './assets/json/atualizacoes.json'
 ];
 self.addEventListener('activate', event => {
   const cacheWhitelist = [CACHE_NAME]; 
@@ -89,6 +92,16 @@ self.addEventListener('install', event => {
               if (ptResponse.ok) {
                 await cache.put(ptURL, ptResponse);
               }
+               const phpURL = './assets/json/atualizacoes.json';
+              const phpResponse = await fetch(phpURL);
+              if (phpResponse.ok) {
+                await cache.put(phpURL, phpResponse);
+              }
+              // const phpURL = 'api/atualizacao.php';
+              // const phpResponse = await fetch(phpURL);
+              // if (phpResponse.ok) {
+              //   await cache.put(phpURL, phpResponse);
+              // }
           } catch (error) {
               console.error("Erro durante o cache.addAll: ", error);
               throw error;
@@ -120,7 +133,64 @@ self.addEventListener('fetch', event => {
   );
 }); 
  
-  
-  
+
+// self.addEventListener('fetch', function(event) {
+//   if (event.request.url.includes('/novidades')) {
+//     event.respondWith(
+//       fetch('api/atualizacao.php')
+//         .then(function(response) {
+//           return response.json();
+//         })
+//         .then(function(data) {
+//           const ultimaModificacao = data.ultimaModificacao;
+//           clients.matchAll().then(clients => {
+//             clients.forEach(client => {
+//               client.postMessage({ultimaModificacao: ultimaModificacao});
+//             });
+//           });
+//           return caches.match(event.request);
+//         })
+//     );
+//   }
+// });
+
+
+self.addEventListener('message', event => {
+  if (event.data.action === 'checkForUpdates') {
+    fetch('./assets/json/atualizacoes.json')
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        const ultimaModificacao = data.ultimaModificacao;
+        clients.matchAll().then(clients => {
+          clients.forEach(client => {
+            client.postMessage({
+              type: 'UPDATE_AVAILABLE',
+              ultimaModificacao: ultimaModificacao
+            });
+          });
+        });
+      })
+      .catch(function(error) {
+        console.error('Erro ao buscar atualizações:', error);
+      });
+  }
+});
+
+
+// self.addEventListener('message', event => {
+//   if (event.data.action === 'notifyAllClients') {
+//       self.clients.matchAll().then(clients => {
+//           clients.forEach(client => {
+//               client.postMessage({
+//                   action: 'showNotification',
+//                   message: 'Notificação personalizada ativada!'
+//               });
+//           });
+//       });
+//   }
+// });
+
   
   

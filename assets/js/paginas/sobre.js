@@ -1,32 +1,36 @@
-import Slides from '../componentes/slides.js';
-
 class Sobre {
     constructor(){
-        this.images = [
-            "assets/img/img1.webp",
-            "assets/img/img2.webp",
-            "assets/img/img3.webp"
-        ];
-        this.slides = new Slides(this.images);
         this.i18nService = null;
     }
     render(i18nService) {
         this.i18nService = i18nService;
         return `
         <h1>${this.i18nService.t('about')}</h1>
-            ${this.slides.render()}
-            <div class="w3-container w3-green w3-cell">
-                <p>Hello W3.CSS Layout.</p>
-            </div>
+        <section class="hero">
+        <div class="hero-content">
+          <h1>John Doe</h1>
+          <p>Developer | Designer | Creator</p>
+          <button class="cta">Download Resume</button>
+        </div>
+      </section>
+      
+      <!-- About Section -->
+      <section class="about">
+        <div class="about-content">
+          <h2>About Me</h2>
+          <p>This is a section about my professional background, skills, and accomplishments.</p>
+        </div>
+      </section>
+      
+      <!-- Portfolio Section -->
+      <section class="portfolio">
+        <div class="portfolio-content">
+          <h2>My Work</h2>
+          <p>Here's a look at some of my recent projects.</p>
+        </div>
+      </section>
         `;
     }
-    afterRender(){
-        this.slides.afterRender();
-    }
-    destroy() {
-        if (this.slides.destroy) {
-            this.slides.destroy();
-        }
-    }
+    
 }
 export default Sobre;

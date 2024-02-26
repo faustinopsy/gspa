@@ -15,10 +15,12 @@ main {
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
-  background-color: rgba(217, 204, 204, 0.4);
-  
+  scroll-behavior: smooth; 
 }
-
+.dark-mode {
+  background-color: #000000;
+  color: #fff;
+}
 .slideshow-container {
   max-width: 100%;
   position: relative;
@@ -229,10 +231,7 @@ main{
   width: 50%; 
   margin-bottom: 20px;
 }
-.dark-mode {
-    background-color: #333;
-    color: #fff;
- }
+
 
  .setting-option {
   margin-bottom: 20px;
@@ -344,3 +343,110 @@ input:checked + .slider:before {
   opacity: 1;
 }
 
+
+.hero {
+  background-image: url('../img/imagem1.webp');
+  background-size: cover;
+  background-position: center;
+  height: 100vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero::after { 
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); 
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; 
+}
+
+.hero h1 {
+  font-size: 4em;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.5em;
+}
+
+.cta {
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta:hover {
+  background: #0056b3;
+}
+
+.about, .portfolio {
+  padding: 50px 20px;
+}
+
+.about-content, .portfolio-content {
+  max-width: 800px;
+  margin: 0 auto; 
+}
+
+.about h2, .portfolio h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.notification-box {
+  position: fixed;
+  bottom: 38px;
+  right: 20px;
+  width: 300px;
+  background-color: #fc3408;
+  color: #fff;
+  padding: 16px;
+  border-radius: 53px 8px 53px 16px;
+  box-shadow: 0 12px 4px rgba(205, 1, 137, 0.2);
+  opacity: 0; 
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s linear 0.5s;
+}
+
+.notification-box p {
+  margin: 0;
+  font-size: 20px;
+}
+
+.notification-box.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hidden {
+  display: none;
+}
+.closeModalInicio{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 14px;
+  background-color: white;
+  font-size: 15px;
+  color: black;
+  border: 3px solid red;
+  border-radius: 35px 9px 39px 9px;
+  cursor: pointer;
+}
