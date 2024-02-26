@@ -1,4 +1,4 @@
-const CACHE_NAME = 'app-cache-v9';
+const CACHE_NAME = 'app-cache-v10';
 const STATIC_ASSETS = [
     './manifest.json',
     './index.html',
