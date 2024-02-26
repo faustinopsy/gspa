@@ -42,6 +42,9 @@ O propósito é guiar estudantes em um desenvolvimento moderno, onde a performan
 - Adicionadas tradução em três línguas e menu de preferências pessoais.
 - Versão final com bonus do projeto, com todas as funcionalidades implementadas e melhorias realizadas.
 
+### [SPA-10-evolucao-OOP-notificaNews](https://github.com/faustinopsy/gspa/tree/SPA-10-evolucao-OOP-notificaNews)
+- Adicionadas notificação via servicework.
+- Versão final final com experimento de notificação sem backend, apenas para notificar sobre novidades e atualizações.
 ## O projeto gSPA
 
 ### Single Page Application (SPA) com JavaScript Puro e Modularização
