@@ -16,14 +16,14 @@ class Card {
             <img src="${imagem}" alt="${titulo}" style="width:200px; height:230px">
             <div class="container">
                 <p>${descricao}</p>
-                <button class="toggle-content-btn w3-btn w3-border w3-block">${this.i18nService.t('details')}</button> 
+                <button class="toggle-content-btn w3-btn w3-border w3-block" aria-label="${this.i18nService.t('details')}">${this.i18nService.t('details')}</button> 
             </div>
         `;
         this.contentDiv.classList.add('content');
         this.contentDiv.style.display = 'none';
         this.contentDiv.innerHTML = `
         <p>${conteudo}</p>
-        <button class="open-url-btn w3-btn w3-border w3-block">${this.i18nService.t('open')}</button>`;
+        <button class="open-url-btn w3-btn w3-border w3-block" aria-label="${this.i18nService.t('open')}">${this.i18nService.t('open')}</button>`;
         this.cardElement.querySelector('.container').appendChild(this.contentDiv);
     }
     afterRender() {

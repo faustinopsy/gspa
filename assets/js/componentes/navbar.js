@@ -7,21 +7,21 @@ class Navbar {
         return `
             <h1 id="titulo">${this.i18nService.t('mini_spa')}</h1>
             <nav id="navbar" class="navbar" >
-                <a href="#home" class="w3-bar-item w3-button">${this.i18nService.t('home')}</a>
-                <a href="#sobre" class="w3-bar-item w3-button">${this.i18nService.t('about')}</a>
-                <a href="#contato" class="w3-bar-item w3-button">${this.i18nService.t('contact')}</a>
-                <a href="#extra" class="w3-bar-item w3-button">${this.i18nService.t('extra')}</a>
+                <a href="#home" class="w3-bar-item w3-button" aria-label="${this.i18nService.t('home')}">${this.i18nService.t('home')}</a>
+                <a href="#sobre" class="w3-bar-item w3-button" aria-label="${this.i18nService.t('about')}">${this.i18nService.t('about')}</a>
+                <a href="#contato" class="w3-bar-item w3-button" aria-label="${this.i18nService.t('contact')}">${this.i18nService.t('contact')}</a>
+                <a href="#extra" class="w3-bar-item w3-button" aria-label="${this.i18nService.t('extra')}">${this.i18nService.t('extra')}</a>
             </nav>
             <div id="mobibar" class="overlay">
                 <div class="overlay-content">
-                    <a href="#" id="homeLink">${this.i18nService.t('home')}</a>
-                    <a href="#sobre" id="aboutLink">${this.i18nService.t('about')}</a>
-                    <a href="#contato" id="contactLink">${this.i18nService.t('contact')}</a>
-                    <a href="#extra" >${this.i18nService.t('extra')}</a>
+                    <a href="#" id="homeLink" aria-label="${this.i18nService.t('home')}">${this.i18nService.t('home')}</a>
+                    <a href="#sobre" id="aboutLink" aria-label="${this.i18nService.t('about')}">${this.i18nService.t('about')}</a>
+                    <a href="#contato" id="contactLink" aria-label="${this.i18nService.t('contact')}">${this.i18nService.t('contact')}</a>
+                    <a href="#extra" aria-label="${this.i18nService.t('extra')}">${this.i18nService.t('extra')}</a>
                     </div>
             </div>
             <div class="w3-bottom w3-black" style="z-index:99;">
-                <button class="w3-bar w3-xlarge w3-black w3-display-bottommiddle" id="hamburg" style="cursor: pointer;">☰</button>
+                <button class="w3-bar w3-xlarge w3-black w3-display-bottommiddle" id="hamburg" style="cursor: pointer;" aria-label="${this.i18nService.t('open')}">☰</button>
             </div>
         `;
     }
