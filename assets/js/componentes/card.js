@@ -13,7 +13,9 @@ class Card {
         this.cardElement.classList.add('w3-card-4',"w3-panel","w3-leftbar", "w3-sand", "w3-third", "w3-center");
         this.cardElement.innerHTML = `
             <h2><b>${titulo}</b></h2>
-            <img src="${imagem}" alt="${titulo}" style="width:300px; height:300px">
+            <div class="aspect-ratio-box">
+              <img src="${imagem}" alt="${titulo}" loading="lazy" class="card-img">
+            </div>
             <div class="container">
                 <p>${descricao}</p>
                 <button class="toggle-content-btn w3-btn w3-border w3-block" aria-label="${this.i18nService.t('details')}">${this.i18nService.t('details')}</button> 

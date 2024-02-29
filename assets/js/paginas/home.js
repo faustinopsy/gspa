@@ -16,7 +16,7 @@ class Home {
         return `
         <h1>${this.i18nService.t('home')}</h1>
         ${this.slides.render()}
-        <div id="cardsContainer"></div>
+        <div id="cardsContainer" class="cards-placeholder"></div>
         `;
     }
     afterRender(){
