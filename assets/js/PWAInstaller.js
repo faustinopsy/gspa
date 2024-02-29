@@ -9,7 +9,7 @@ class PWAInstaller {
 
     initialize() {
         this.setupListeners();
-        this.checkReadState();
+        //this.checkReadState();
         this.registerServiceWorker();
     }
 
