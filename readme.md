@@ -70,3 +70,6 @@ Em resumo, este projeto oferece uma introdução abrangente à construção de S
 ---
 
 Este projeto é apenas um exemplo modelo para expansão e estudos, mas mostra a evolução passo a passo de um projeto de Single Page Application (SPA/PWA) cache otimizado e SEO otimizado, demonstrando como cada nova versão adiciona funcionalidades e melhorias.
+
+
+![Métricas do pagespeed da 10ª versão após algumas otimizações ](pagespeed.png) "pagespeed")
