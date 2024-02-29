@@ -73,3 +73,5 @@ Este projeto é apenas um exemplo modelo para expansão e estudos, mas mostra a 
 
 
 ![Métricas do pagespeed da 10ª versão após algumas otimizações ](pagespeed.png) "pagespeed")
+
+https://pagespeed.web.dev/analysis/https-faustinopsy-github-io-gspa/0rem44601m?form_factor=mobile
