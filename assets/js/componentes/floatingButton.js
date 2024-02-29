@@ -4,6 +4,7 @@ class FloatingButton {
         this.navegar = navegar;
         this.buttonElement = document.createElement('button');
         this.buttonElement.classList.add('floating-button');
+        this.buttonElement.setAttribute('aria-label', this.i18nService.t('page_settings'));
     }
     render() {
         document.body.appendChild(this.buttonElement);
