@@ -42,6 +42,7 @@ class PWAInstaller {
 
         const closeButton = document.createElement('button');
         closeButton.textContent = 'Fechar';
+        closeButton.setAttribute("alt","${this.linguagem.t('cancel')}");
         closeButton.className = 'closeModalInicio';
 
         closeButton.onclick = function () {
