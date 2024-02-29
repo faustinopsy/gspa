@@ -22,21 +22,33 @@ class PWAInstaller {
 
     mostrarModalNaoFechavel() {
         localStorage.setItem('lido', true);
-        document.getElementById('left-panel').style.transform = 'translateX(-100%)';
-        document.getElementById('right-panel').style.transform = 'translateX(100.03%)';
-        document.getElementById('star2').style.transform = 'translate(-50%, -50%) scale(0.5)';
-        document.getElementById('star').style.display = 'block';
-        document.getElementById('star2').style.display = 'block';
-        document.getElementById('left-panel').style.display = 'block';
-        document.getElementById('right-panel').style.display = 'block';
-
+        
+        const leftPanel = document.getElementById('left-panel');
+        const rightPanel = document.getElementById('right-panel');
+        const star = document.getElementById('star');
+        const star2 = document.getElementById('star2');
+        leftPanel.style.display = 'block';
+        rightPanel.style.display = 'block';
+    
         setTimeout(() => {
-            document.getElementById('star').style.display = 'none';
-            document.getElementById('star2').style.display = 'none';
-            document.getElementById('left-panel').style.display = 'none';
-            document.getElementById('right-panel').style.display = 'none';
-        }, 3000); 
+            leftPanel.style.transform = 'translateX(0)';
+            rightPanel.style.transform = 'translateX(0)';
+            star.style.transform = 'translate(-50%, -50%) scale(0.5)';
+            star.style.display = 'block';
+            star2.style.display = 'block';
+        }, 100); 
+        setTimeout(() => {
+            leftPanel.style.transform = 'translateX(-100%)';
+            rightPanel.style.transform = 'translateX(100%)';
+            star.style.display = 'none';
+            star2.style.display = 'none';
+            setTimeout(() => {
+                leftPanel.style.display = 'none';
+                rightPanel.style.display = 'none';
+            }, 500); 
+        }, 2000); 
     }
+    
 
     async setupListeners() {
         await this.linguagem.loadTranslations();

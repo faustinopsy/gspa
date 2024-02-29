@@ -17,7 +17,6 @@ const STATIC_ASSETS = [
     './assets/img/js3.webp',
     './assets/img/config.webp',
     './assets/img/logo.png',
-    './assets/css/style.css',
     './assets/css/w3.css',
     './assets/js/App.js',
     './assets/js/router.js',
