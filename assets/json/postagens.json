@@ -2,6 +2,9 @@
     {
       "titulo": "Exemplo de Card 1",
       "imagem": "assets/img/imagem1.webp",
+      "imagemSmall": "assets/img/imagem1-small.webp",
+      "imagemMedium": "assets/img/imagem1-medium.webp",
+      "imagemLarge": "assets/img/imagem1-large.webp",
       "descricao": "Descrição do Card 1",
       "conteudo": "Conteúdo detalhado do Card 1",
       "url" : "detalhado_Card_1"
@@ -9,6 +12,9 @@
     {
       "titulo": "Exemplo de Card 2",
       "imagem": "assets/img/imagem2.webp",
+      "imagemSmall": "assets/img/imagem2-small.webp",
+      "imagemMedium": "assets/img/imagem2-medium.webp",
+      "imagemLarge": "assets/img/imagem2-large.webp",
       "descricao": "Descrição do Card 2",
       "conteudo": "Conteúdo detalhado do Card 2",
       "url" : "http://localhost:666/#detalhado_Card_2"
@@ -16,6 +22,9 @@
     {
       "titulo": "Exemplo de Card 3",
       "imagem": "assets/img/imagem3.webp",
+      "imagemSmall": "assets/img/imagem3-small.webp",
+      "imagemMedium": "assets/img/imagem3-medium.webp",
+      "imagemLarge": "assets/img/imagem3-large.webp",
       "descricao": "Descrição do Card 3",
       "conteudo": "Conteúdo detalhado do Card 3",
       "url" : "detalhado_Card_3"

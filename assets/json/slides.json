@@ -2,6 +2,9 @@
     {
       "titulo": "Exemplo de Card 1",
       "imagem": "assets/img/js1.webp",
+      "imagemSmall": "assets/img/imagem1-small.webp",
+      "imagemMedium": "assets/img/imagem1-medium.webp",
+      "imagemLarge": "assets/img/imagem1-large.webp",
       "descricao": "Descrição do Card 1",
       "conteudo": "Conteúdo detalhado do Card 1",
       "imagensRelacionadas": ["assets/img/js1.webp","assets/img/js2.webp","assets/img/js3.webp"]
@@ -9,6 +12,9 @@
     {
       "titulo": "Exemplo de Card 2",
       "imagem": "assets/img/imagem1.webp",
+      "imagemSmall": "assets/img/imagem2-small.webp",
+      "imagemMedium": "assets/img/imagem2-medium.webp",
+      "imagemLarge": "assets/img/imagem2-large.webp",
       "descricao": "Descrição do Card 2",
       "conteudo": "Conteúdo detalhado do Card 2",
       "imagensRelacionadas": ["assets/img/imagem1.webp","assets/img/imagem2.webp"]
@@ -16,6 +22,9 @@
     {
       "titulo": "Exemplo de Card 3",
       "imagem": "assets/img/imagem1.webp",
+      "imagemSmall": "assets/img/imagem3-small.webp",
+      "imagemMedium": "assets/img/imagem3-medium.webp",
+      "imagemLarge": "assets/img/imagem3-large.webp",
       "descricao": "Descrição do Card 3",
       "conteudo": "Conteúdo detalhado do Card 3",
       "imagensRelacionadas": ["assets/img/imagem1.webp","assets/img/imagem2.webp"]

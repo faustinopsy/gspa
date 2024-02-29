@@ -9,12 +9,20 @@ class Card {
         this.contentDiv = document.createElement('div');
     }
     render() {
-        const { titulo, imagem, descricao, conteudo, url } = this.data; 
+        const { titulo, imagem,imagemSmall,imagemMedium,imagemLarge, descricao, conteudo, url } = this.data; 
         this.cardElement.classList.add('w3-card-4',"w3-panel","w3-leftbar", "w3-sand", "w3-third", "w3-center");
         this.cardElement.innerHTML = `
             <h2><b>${titulo}</b></h2>
             <div class="aspect-ratio-box">
-              <img src="${imagem}" alt="${titulo}" loading="lazy" class="card-img">
+              <img img srcset="${imagemSmall} 300w,
+                                ${imagemMedium} 600w,
+                                ${imagemLarge} 1200w"
+                        sizes="(max-width: 600px) 300px,
+                                (max-width: 900px) 600px,
+                                1200px"
+                        src="${imagemMedium}"
+                        alt="${titulo}"
+                        loading="lazy" class="card-img">
             </div>
             <div class="container">
                 <p>${descricao}</p>
