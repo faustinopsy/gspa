@@ -12,8 +12,8 @@ class SlideControls {
         <div id="dotContainer" style="text-align:center">
                 ${dotsHtml}
             </div>
-        <a class="prev" aria-label="prev">&#10094;</a>
-        <a class="next" aria-label="prev">&#10095;</a>
+        <span class="prev" aria-label="prev">&#10094;</span>
+        <span class="next" aria-label="prev">&#10095;</span>
             
         `;
     }
