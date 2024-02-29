@@ -450,3 +450,78 @@ input:checked + .slider:before {
   border-radius: 35px 9px 39px 9px;
   cursor: pointer;
 }
+
+.panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background: #000;
+  transition: 1s
+}
+
+#left-panel {
+  left: 100%;
+  height: 2000px;
+  z-index: 10000;
+  background-color: rgba(0,0,0,.7);
+  backdrop-filter: blur(2px)
+}
+
+#right-panel {
+  right: 100%;
+  height: 2000px;
+  z-index: 10000;
+  background-color: rgba(0,0,0,.7);
+  backdrop-filter: blur(2px)
+}
+
+#star {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  transform: translateX(100%) scale(0);
+  transition: .5s;
+  z-index: 10002;
+  animation: pulse 2s 1s infinite
+}
+
+#star2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  transform: translate(-120%) scale(0);
+  transition: 1.2s;
+  z-index: 10003;
+  animation: pulse 2s 1s infinite
+}
+
+@keyframes pulse {
+  0% {
+      transform: translate(-50%,-50%) scale(1)
+  }
+
+  50% {
+      transform: translate(-50%,-50%) scale(1.2)
+  }
+
+  100% {
+      transform: translate(-50%,-50%) scale(1);
+      opacity: 0
+  }
+}
+
+#star-border {
+  filter: drop-shadow(0 0 4px black);
+  display: inline-block
+}
+
+#star-border:hover {
+  cursor: pointer
+}

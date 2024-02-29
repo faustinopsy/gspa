@@ -22,43 +22,20 @@ class PWAInstaller {
 
     mostrarModalNaoFechavel() {
         localStorage.setItem('lido', true);
-        const modal = document.createElement('div');
-        modal.style.position = 'fixed';
-        modal.style.top = '0';
-        modal.style.left = '0';
-        modal.style.width = '100%';
-        modal.style.height = '100%';
-        modal.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
-        modal.style.backdropFilter = 'blur(15px)';
-        modal.style.display = 'flex';
-        modal.style.justifyContent = 'center';
-        modal.style.alignItems = 'center';
-        modal.style.zIndex = '10000';
+        document.getElementById('left-panel').style.transform = 'translateX(-100%)';
+        document.getElementById('right-panel').style.transform = 'translateX(100.03%)';
+        document.getElementById('star2').style.transform = 'translate(-50%, -50%) scale(0.5)';
+        document.getElementById('star').style.display = 'block';
+        document.getElementById('star2').style.display = 'block';
+        document.getElementById('left-panel').style.display = 'block';
+        document.getElementById('right-panel').style.display = 'block';
 
-        const modalContent = document.createElement('div');
-        modalContent.style.backgroundColor = '#fff';
-        modalContent.style.padding = '20px';
-        modalContent.style.borderRadius = '5px';
-
-        const closeButton = document.createElement('button');
-        closeButton.textContent = 'Fechar';
-        closeButton.setAttribute("alt","fechar");
-        closeButton.className = 'closeModalInicio';
-
-        closeButton.onclick = function () {
-            document.body.removeChild(modal);
-        };
-
-        modalContent.innerHTML += `
-            <h2>🚀 Seja bem vindo!</h2>
-            <p>Olá, esse app é um modelo SPA.</p>
-            <p> Este é um modelo para ser expandido, como forma de estudo!</p>
-            <p>Espero que goste, feito por um professor para alunos.</p> 
-        `;
-
-        modal.appendChild(modalContent);
-        modalContent.appendChild(closeButton);
-        document.body.appendChild(modal);
+        setTimeout(() => {
+            document.getElementById('star').style.display = 'none';
+            document.getElementById('star2').style.display = 'none';
+            document.getElementById('left-panel').style.display = 'none';
+            document.getElementById('right-panel').style.display = 'none';
+        }, 3000); 
     }
 
     async setupListeners() {

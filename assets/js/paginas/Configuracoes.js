@@ -7,26 +7,24 @@ class Configuracoes {
         this.language = LocalStorageService.getItem('language') || 'pt';
         this.backgroundImage = LocalStorageService.getItem('backgroundImage') || '';
         this.backdropFilter = LocalStorageService.getItem('backdropFilter') || 'blur(10px)';
-        this.textColor = LocalStorageService.getItem('textColor') || '#000000'; 
-        this.fontType = LocalStorageService.getItem('fontType') || 'Arial';
+        this.textColor = LocalStorageService.getItem('textColor') ? LocalStorageService.getItem('textColor') : null ; 
+        this.fontType = LocalStorageService.getItem('fontType') ? LocalStorageService.getItem('fontType') : null;
         this.i18nService = null;
     }
 
     applySettings() {
+        let fontSizeValue;
         if (this.backgroundImage) {
             document.body.style.backgroundImage = `url('${this.backgroundImage}')`;
             document.body.style.backgroundSize = 'cover';
             document.body.style.backgroundPosition = 'center';
             document.body.style.backgroundRepeat = 'no-repeat';
             document.getElementById('app').style.backdropFilter = this.backdropFilter;
-            document.getElementById('app').style.backgroundColor = 'transparent'; 
+            document.getElementById('app').style.backgroundColor = 'transparent';
         } else {
             const initialBackgroundColor = LocalStorageService.getItem('backgroundColor') || '#FFFFFF';
             document.getElementById('app').style.backgroundColor = initialBackgroundColor;
         }
-        let fontSizeValue;
-        document.body.style.color = this.textColor;
-        document.body.style.fontFamily = this.fontType;
         switch (this.fontSize) {
             case 'small':
                 fontSizeValue = '12px';
@@ -46,6 +44,12 @@ class Configuracoes {
             default:
                 fontSizeValue = '16px'; 
         }
+        if(this.textColor !=null){
+            document.body.style.color = this.textColor
+        }
+        if(this.textColor !=null){
+            document.body.style.fontFamily = this.fontType
+        } 
         document.documentElement.style.setProperty('--p-font-size', fontSizeValue);
         if (this.darkMode) {
             document.body.classList.add('dark-mode');
