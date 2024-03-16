@@ -18,6 +18,11 @@ class App {
         this.configuracoes.applySettings();
         const floatingButton = new FloatingButton(this.linguagem, this.navegar.bind(this));
         floatingButton.render();
+        const navbar = new Navbar();
+        this.nav.innerHTML = navbar.render(this.linguagem);
+        navbar.fixNavbarOnMobile();
+        navbar.afterRender();
+        window.addEventListener('resize', () => navbar.fixNavbarOnMobile());
         window.addEventListener("hashchange", () => this.navegar(location.hash));
         this.navegar(location.hash);
     }
@@ -30,11 +35,7 @@ class App {
     async navegar(rota) {
         const rotaAtual = rota || '#home';
         const classeAtual = rotas[rotaAtual].component;
-        const navbar = new Navbar();
-        this.nav.innerHTML = navbar.render(this.linguagem);
-        navbar.fixNavbarOnMobile();
-        navbar.afterRender();
-        window.addEventListener('resize', () => navbar.fixNavbarOnMobile());
+        
         if (this.componenteAtual && this.componenteAtual.destroy) {
             this.componenteAtual.destroy();
         }
